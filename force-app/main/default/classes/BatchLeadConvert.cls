@@ -10,7 +10,7 @@ public with sharing class BatchLeadConvert implements Database.Batchable<SObject
         List<Database.LeadConvert> leadConverts = new List<Database.LeadConvert>();
         for(Lead record:records){
             Database.LeadConvert lc = new Database.LeadConvert();
-            lc.setConvertedStatus(CONVERTED_STATUS);
+            lc.setConvertedStatus(CONVERTED_STATUS); 
             lc.setLeadId(record.Id);
 
             leadConverts.add(lc);
